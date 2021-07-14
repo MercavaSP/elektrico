@@ -29,12 +29,24 @@
 	<!-- * * * * * * Mobile menu * * * * * * -->
 	<div class="mobile-menu">
 		<span class="mobile-menu-close close"></span>
-		<a href="#callback" class="callback-btn fancyboxModal hidden-sm"><i class="fa fa-phone"></i> Заказать звонок</a>
+		<a href="#callback" class="callback-btn popup-btn fancyboxModal hidden-sm"><i class="fa fa-phone"></i> Заказать звонок</a>
 		<div class="push20"></div>
 		<ul>
-			<li><a href="#services">Цены на услуги</a></li>
-			<li><a href="#faq">Ответы на вопросы</a></li>
-			<li><a href="#contacts">Контакты</a></li>
+			<li>
+				<a  href="#services">
+					Цены на услуги
+				</a>
+			</li>
+			<li>
+				<a  href="#faq">
+					Ответы на вопросы
+				</a>
+			</li>
+			<li>
+				<a  href="#contacts">
+					Контакты
+				</a>
+			</li>
 		</ul>
 	</div>
 	<div class="overlay"></div>
@@ -77,9 +89,9 @@
 					<!-- * * * * * * Top menu * * * * * * -->
 					<div class="top-menu visible-md-inline-block visible-lg-inline-block">
 						<ul>
-							<li><a href="#services">Цены на услуги</a></li>
-							<li><a href="#faq">Ответы на вопросы</a></li>
-							<li><a href="#contacts">Контакты</a></li>
+							<li><a class="smooth-scroll" href="#services">Цены на услуги</a></li>
+							<li><a class="smooth-scroll" href="#faq">Ответы на вопросы</a></li>
+							<li><a class="smooth-scroll" href="#contacts">Контакты</a></li>
 						</ul>
 					</div>
 					<div class="cleaner"></div>
@@ -282,7 +294,7 @@
 			<div class="container text-center">
 				<span class="f30 helios">Не нашли нужной услуги?</span>
 				<div class="push20 visible-xs visible-sm"></div>
-				<a class="button button-services fancyboxModal invert" href="#feedback">Звоните, мы обязательно вам
+				<a class="callback-btn button button-services  fancyboxModal invert" href="#feedback">Звоните, мы обязательно вам
 					поможем!</a>
 			</div>
 			<div class="push50"></div>
@@ -711,7 +723,9 @@
 
 
 	<!-- * * * * * * button to top * * * * * * -->
-	<img src="images/32_chevron_up.svg" alt="up" class="up">
+	<a class="smooth-scroll up" href="#services">
+		<!-- <img src="images/32_chevron_up.svg" alt="up" class=" up"> -->
+	</a>
 	<!-- * * * * * * button to top: end * * * * * * -->
 
 
@@ -719,7 +733,7 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-	
+	<script src="dist/dev-bundle.js"></script>
 </body>
 
 </html>
