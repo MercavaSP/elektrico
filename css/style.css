@@ -690,6 +690,7 @@ hr.white {
   height: 51px;
   margin-top: -25.5px;
 }
+
 /*------------------------------
 	 Map
 ------------------------------*/
@@ -1226,6 +1227,14 @@ video#video_background {
   background-image: url(../images/32_chevron_up.svg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.isBtn {
+  opacity: 1;
+  transition: 1s;
+}
+.isBtn_hide {
+  opacity: 0;
 }
 
 @media only screen and (min-width: 992px) {

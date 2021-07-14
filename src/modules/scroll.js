@@ -5,10 +5,25 @@ const scroll = () => {
         links[i].addEventListener('click', (event) => {
             event.preventDefault();
 
-            console.log(event.target.getAttribute("href").substr(1));
+            const blockID = event.target.getAttribute('href').substr(1);
+
+            document.getElementById(blockID).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+                
+            });
+            console.log();
         });
     }   
 
+    const scrollBtn = document.querySelector('.isBtn');
+    window.onscroll = () => {
+        if (window.scrollY > 550) {
+            scrollBtn.classList.remove('isBtn_hide');
+        } else if (window.scrollY < 550) {
+            scrollBtn.classList.add('isBtn_hide');
+        }
+    };
 };
 
 export default scroll;
