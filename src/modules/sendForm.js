@@ -1,3 +1,57 @@
+// const forms = () => {
+//     const form = document.querySelectorAll('form'),
+//         inputs = document.querySelectorAll('input');
+
+//     const message = {
+//         loading: 'Загрузка...',
+//         sucess: 'Спасибо! Скоро с вами свяжемся',
+//         failure: 'Что-то пошло не так...'
+//     };
+
+//     const postData = async (url, data) => {
+//         document.querySelector('.status').textContent = message.loading;
+//         let res = await fetch(url, {
+//             method: "POST",
+//             body: data
+//         });
+
+//         return await res.text();
+//     };
+
+//     const clearInpust = () => {
+//         inputs.forEach(item => {
+//             item.value = '';
+//         });
+//     };
+
+//     form.forEach(item => {
+//         item.addEventListener('submit', (event) => {
+//             event.preventDefault();
+
+//             let statusMessage = document.createElement('div');
+//             statusMessage.classList.add('status');
+//             item.appendChild(statusMessage);
+
+//             const formData = new FormData (item);
+
+//             postData('./server.php', formData)
+//                 .then(res => {
+//                     console.log(res);
+//                     statusMessage.textContent = message.sucess;
+//                 })
+//                 .catch(() => statusMessage.textContent = message.failure)
+//                 .finaly(() => {
+//                     clearInpust();
+//                     setTimeout(() => {
+//                         statusMessage.remuve();
+//                     }, 5000);
+//                 });
+//         });
+//     });
+// };
+
+// export default forms;
+
 const sendForm = () => {
         const errorMessage = 'Что то пошло не так...';
         const loadMessage = 'Загрузка...';
@@ -31,7 +85,7 @@ const sendForm = () => {
                 inp.removeAttribute('style');
             }, 5000);
         };
-
+        
         const validateTel = (tel) => {
             let str = tel[0].value.replace('+', '').length;
             if (str < 8) {
@@ -44,10 +98,9 @@ const sendForm = () => {
         };
 
         forms.forEach(form => {
-
             form.addEventListener('input', (evt) => {
                 let target = evt.target;
-                if (target.name === 'user_phone') {
+                if (target.name === 'tel') {
                     if (target.style) {
                         target.style.border = 'none';
                     }
@@ -57,13 +110,15 @@ const sendForm = () => {
                     }
 
                 }
-                if (target.name === 'user_name' || target.name === 'user_message') {
-                    target.value = target.value.replace(/[^а-я ]/gi, '');
+                if (target.name === 'fio') {
+                    target.value = target.value.replace(/[^а-я \-\_\.\,\!\?\~\*\']/gi, '');
                 }
+                
+                
             });
 
             const postData = (body) => {
-                console.log('body: ', body);
+                // console.log('body: ', body);
                 return fetch('./server.php', {
                     method: 'POST',
                     headers: {
@@ -76,7 +131,7 @@ const sendForm = () => {
 
             form.addEventListener('submit', (event) => {
                 event.preventDefault();
-                const firmTel = [...event.target.elements].filter((item) => item.name === 'user_phone');
+                const firmTel = [...event.target.elements].filter((item) => item.name === 'tel');
                 if (!validateTel(firmTel)) {
                     return;
                 }
