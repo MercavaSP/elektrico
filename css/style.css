@@ -844,11 +844,23 @@ hr.white {
   position: absolute;
   bottom: 25px;
 }
+
+.top-slider .slick-dots .dot {
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  margin: 0 10px;
+  border-radius: 50%;
+  border: solid #fff;
+  display: inline-block;
+  -webkit-transition: background-color, -webkit-transform 0.4s;
+  transition: background-color, transform 0.4s, -webkit-transform 0.4s;
+}
 .top-slider .slick-dots li {
   border-color: #fff !important;
 }
 .top-slider .slick-dots li.slick-active {
-  background-color: #fff !important;
+  background-color: #19b5fe;
 }
 .top-slider {
   overflow: hidden;
