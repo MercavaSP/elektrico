@@ -5,7 +5,7 @@ const topSlider = () => {
         textItem = document.querySelectorAll('.table');
 
     let currentSlide = 0,
-    interval,
+    interval;
     // dots;
 
     const autoPlaySlide = () => {
