@@ -4,6 +4,7 @@ const togglePopup = () => {
         overlay = document.querySelector('.modal-overlay'),
         popupBtn = document.querySelectorAll('.callback-btn'),
         popupClose = document.querySelector('.modal-close');
+        // order = document.querySelectorAll('.services-img');
 
     popupBtn.forEach((elem) => {
         elem.addEventListener('click', () => {
@@ -12,6 +13,12 @@ const togglePopup = () => {
         });
     });
     
+    // order.forEach((e) => {
+    //     e.addEventListener('click', () => {
+    //         console.log(1);
+    //     });
+    // });
+
     popupClose.addEventListener('click', () => {
         popup.style.display = 'none';
         overlay.style.display = 'none';

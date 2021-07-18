@@ -177,7 +177,7 @@
 							<div class="element relative">
 								<a class="absolute fancyboxModal" href="#application"
 									data-application="Аварийный выезд"></a>
-								<div class="img-wrapper">
+								<div class="img-wrapper services-img">
 									<img src="images/service1.jpg">
 								</div>
 								<div class="element-content">
@@ -194,7 +194,7 @@
 							<div class="element relative">
 								<a class="absolute fancyboxModal" href="#application"
 									data-application="Монтаж или замена электропроводки"></a>
-								<div class="img-wrapper">
+								<div class="img-wrapper services-img">
 									<img src="images/service2.jpg">
 								</div>
 								<div class="element-content">
@@ -211,7 +211,7 @@
 							<div class="element relative">
 								<a class="absolute fancyboxModal" href="#application"
 									data-application="Ремонт, замена, перенос розеток"></a>
-								<div class="img-wrapper">
+								<div class="img-wrapper services-img">
 									<img src="images/service3.jpg">
 								</div>
 								<div class="element-content">
@@ -228,7 +228,7 @@
 							<div class="element relative">
 								<a class="absolute fancyboxModal" href="#application"
 									data-application="Замена электросчетчика"></a>
-								<div class="img-wrapper">
+								<div class="img-wrapper services-img">
 									<img src="images/service4.jpg">
 								</div>
 								<div class="element-content">
@@ -245,7 +245,7 @@
 							<div class="element relative">
 								<a class="absolute fancyboxModal" href="#application"
 									data-application="Установка, замена люстры"></a>
-								<div class="img-wrapper">
+								<div class="img-wrapper services-img">
 									<img src="images/service5.jpg">
 								</div>
 								<div class="element-content">
@@ -262,7 +262,7 @@
 							<div class="element relative">
 								<a class="absolute fancyboxModal" href="#application"
 									data-application="Установка светильников"></a>
-								<div class="img-wrapper">
+								<div class="img-wrapper services-img">
 									<img src="images/service6.jpg">
 								</div>
 								<div class="element-content">
@@ -279,8 +279,8 @@
 				</div>
 
 				<div class="services-arrow">
-					<img class="arrow-left" src="images/right-arrow_1.svg" alt="arrow-left">
-					<img class="arrow-right" src="images/right-arrow_1.svg" alt="arrow-right">
+					<img id="btnLeft" class="btnLeft arrow-left" src="images/right-arrow_1.svg" alt="arrow-left">
+					<img id="btnRight" class="btnRight arrow-right" src="images/right-arrow_1.svg" alt="arrow-right">
 				</div>
 
 			</div>
@@ -737,6 +737,22 @@
     <![endif]-->
 	<script src="https://polyfill.io/v3/polyfill.min.js?features=scrollIntoView"></script>
 	<script src="dist/dev-bundle.js"></script>
+	<script src="/src/modules/carousel.js"></script>
+	<script>
+		
+		const carousel = new SliderCarousel({
+			main: '.services-elements',
+			wrap: '.services-carousel',
+			next: '#btnRight',
+			prev: '#btnLeft',
+			slidesToShow: 3,
+            infinity: true,
+			
+		});
+
+		carousel.init();
+
+	</script>
 </body>
 
 </html>
