@@ -2,6 +2,7 @@ const sendForm = () => {
         const errorMessage = 'Что то пошло не так...';
         const loadMessage = 'Загрузка...';
         const successMessage = 'Спасибо! Мы с вами свяжемся!';
+        const fio1 = document.getElementById('fio-1');
 
         const forms = document.querySelectorAll('form');
         const statusMessage = document.createElement('div');
@@ -40,8 +41,8 @@ const sendForm = () => {
             } else {
                 return true;
             }
-
         };
+        
 
         forms.forEach(form => {
             form.addEventListener('input', (evt) => {
@@ -57,7 +58,7 @@ const sendForm = () => {
 
                 }
                 if (target.name === 'fio') {
-                    target.value = target.value.replace(/[^а-я \-\_\.\,\!\?\~\*\']/gi, '');
+                    target.value = target.value.replace(/[^а-я \-\_\.\,\!\?\~\*\']{2,}/gi, '');
                 }
                 
                 

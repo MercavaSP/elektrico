@@ -54,7 +54,7 @@
 
 
 
-	<div class="main-wrapper">
+	<div id="top-menu" class="main-wrapper">
 		<!-- * * * * * * Header * * * * * * -->
 		<div class="header-wrapper">
 			<div class="header-panel">
@@ -643,12 +643,15 @@
 		<div class="rf">
 			<form action="" name="form-callback">
 				<div class="form-group">
-					<input type="text" name="fio" class="form-control" placeholder="Ваше имя" />
+					<input id="fio-1" type="text" name="fio" class="form-control" placeholder="Ваше имя" />
 				</div>
+				<div class="error" style="height: 20px; color: red;"></div>
 
 				<div class="form-group">
 					<input type="text" name="tel" class="form-control tel required" placeholder="Телефон*" />
 				</div>
+				<div class="error" style="height: 20px; color: red;"></div>
+
 				<p>
 					<span class="status"></span>
 					<span class="red">*</span> <span class="f12">- поля, обязательные для заполнения</span></p>
@@ -726,7 +729,7 @@
 
 
 	<!-- * * * * * * button to top * * * * * * -->
-	<a class="smooth-scroll isBtn isBtn_hide up" href="#services">
+	<a class="smooth-scroll isBtn isBtn_hide up" href="#top-menu">
 		<!-- <img src="images/32_chevron_up.svg" alt="up" class=" up"> -->
 	</a>
 	<!-- * * * * * * button to top: end * * * * * * -->

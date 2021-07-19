@@ -7,12 +7,12 @@ const scroll = () => {
 
             const blockID = event.target.getAttribute('href').substr(1);
 
+            console.log(document.getElementById(blockID));
             document.getElementById(blockID).scrollIntoView({
                 behavior: 'smooth',
-                block: 'start',
+                block: 'start'
                 
             });
-            console.log();
         });
     }   
 
