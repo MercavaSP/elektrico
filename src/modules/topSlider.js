@@ -46,10 +46,12 @@ const topSlider = () => {
             let target = event.target;
 
             if (!target.matches('.dot')) {
+                console.log(target);
                 return;
             }
-
-            prevSlide(dots, currentSlide, 'dot-active');
+            prevSlide(slide, currentSlide, 'top-slider_item__active');
+            prevSlide(textItem, currentSlide, 'active');
+            prevSlide(dots, currentSlide, 'slick-active');
 
             if (target.matches('.dot')) {
                 dots.forEach((elem, index) => {
@@ -66,7 +68,9 @@ const topSlider = () => {
             if (currentSlide < 0) {
                 currentSlide = slide.length - 1;
             }
-            nextSlide(dots, currentSlide, 'dot-active');
+            nextSlide(slide, currentSlide, 'top-slider_item__active');
+            nextSlide(textItem, currentSlide, 'active');
+            nextSlide(dots, currentSlide, 'slick-active');
 
         });
 

@@ -855,6 +855,7 @@ hr.white {
   display: inline-block;
   -webkit-transition: background-color, -webkit-transform 0.4s;
   transition: background-color, transform 0.4s, -webkit-transform 0.4s;
+  z-index: 15;
 }
 .top-slider .slick-dots li {
   border-color: #fff !important;
@@ -884,17 +885,6 @@ hr.white {
 
   opacity: 1;
 }
-
-/* .top-slider .top-slider_item:before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.5);
-} */
 
 .top-slider .table {
   position: relative;
@@ -1110,13 +1100,13 @@ hr.white {
   -o-transition: all 200ms ease-out;
   transition: all 200ms ease-out;
 }
-.services-section .element .img-wrapper {
+.services-section .element .img-wrapper_s {
   overflow: hidden;
   position: relative;
   background: #fff;
   padding: 15px 15px 0;
 }
-.services-section .element .img-wrapper:after {
+.services-section .element .img-wrapper_s:after {
   content: "";
   display: block;
   position: absolute;
@@ -1131,10 +1121,10 @@ hr.white {
   -o-transition: all 200ms ease-out;
   transition: all 200ms ease-out;
 }
-.services-section .element:hover .img-wrapper:after {
+.services-section .element:hover .img-wrapper_s:after {
   opacity: 1;
 }
-.services-section .element .img-wrapper:before {
+.services-section .element .img-wrapper_s:before {
   content: "Оформить заявку";
   display: block;
   position: absolute;
@@ -1156,16 +1146,16 @@ hr.white {
   text-transform: uppercase;
   border: 2px solid #fff;
 }
-.services-section .element:hover .img-wrapper:before {
+.services-section .element:hover .img-wrapper_s:before {
   opacity: 1;
 }
-.services-section .element .img-wrapper img {
+.services-section .element .img-wrapper_s img {
   -webkit-transition: all 200ms ease-out;
   -moz-transition: all 200ms ease-out;
   -o-transition: all 200ms ease-out;
   transition: all 200ms ease-out;
 }
-.services-section .element:hover .img-wrapper img {
+.services-section .element:hover .img-wrapper_s img {
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
   -o-transform: scale(1.2);
