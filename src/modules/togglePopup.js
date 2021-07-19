@@ -16,7 +16,6 @@ const togglePopup = () => {
     });
     
     
-    console.log(order);
     order.forEach((e) => {
         e.addEventListener('click', () => {
             popup.style.display = 'block';

@@ -82,7 +82,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar togglePopup = function togglePopup() {\n  var popup = document.querySelector('.modal-callback'),\n      overlay = document.querySelector('.modal-overlay'),\n      popupBtn = document.querySelectorAll('.callback-btn'),\n      popupClose = document.querySelector('.modal-close'),\n      order = document.querySelectorAll('.slide-card');\n  popupBtn.forEach(function (elem) {\n    elem.addEventListener('click', function () {\n      popup.style.display = 'block';\n      overlay.style.display = 'block';\n    });\n  });\n  console.log(order);\n  order.forEach(function (e) {\n    e.addEventListener('click', function () {\n      popup.style.display = 'block';\n      overlay.style.display = 'block';\n    });\n  });\n  popupClose.addEventListener('click', function () {\n    popup.style.display = 'none';\n    overlay.style.display = 'none';\n  });\n  overlay.addEventListener('click', function (e) {\n    if (e.target === overlay) {\n      popup.style.display = 'none';\n      overlay.style.display = 'none';\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (togglePopup);\n\n//# sourceURL=webpack://electric/./src/modules/togglePopup.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar togglePopup = function togglePopup() {\n  var popup = document.querySelector('.modal-callback'),\n      overlay = document.querySelector('.modal-overlay'),\n      popupBtn = document.querySelectorAll('.callback-btn'),\n      popupClose = document.querySelector('.modal-close'),\n      order = document.querySelectorAll('.slide-card');\n  popupBtn.forEach(function (elem) {\n    elem.addEventListener('click', function () {\n      popup.style.display = 'block';\n      overlay.style.display = 'block';\n    });\n  });\n  order.forEach(function (e) {\n    e.addEventListener('click', function () {\n      popup.style.display = 'block';\n      overlay.style.display = 'block';\n    });\n  });\n  popupClose.addEventListener('click', function () {\n    popup.style.display = 'none';\n    overlay.style.display = 'none';\n  });\n  overlay.addEventListener('click', function (e) {\n    if (e.target === overlay) {\n      popup.style.display = 'none';\n      overlay.style.display = 'none';\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (togglePopup);\n\n//# sourceURL=webpack://electric/./src/modules/togglePopup.js?");
 
 /***/ }),
 
@@ -495,7 +495,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("5f1634312e99548987ac")
+/******/ 		__webpack_require__.h = () => ("eeffd62ff50004bd020c")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
