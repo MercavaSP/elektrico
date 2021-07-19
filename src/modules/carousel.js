@@ -98,3 +98,4 @@ class SliderCarousel {
 
 }
 
+export default SliderCarousel;
