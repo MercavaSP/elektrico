@@ -42,7 +42,6 @@ const sendForm = () => {
                 return true;
             }
         };
-        
 
         forms.forEach(form => {
             form.addEventListener('input', (evt) => {
@@ -59,6 +58,7 @@ const sendForm = () => {
                 }
                 if (target.name === 'fio') {
                     target.value = target.value.replace(/[^а-я \-\_\.\,\!\?\~\*\']{2,}/gi, '');
+
                 }
                 
                 
@@ -82,6 +82,7 @@ const sendForm = () => {
                 if (!validateTel(firmTel)) {
                     return;
                 }
+                
 
                 form.appendChild(statusMessage);
                 statusMessage.style.cssText = `font-size: 2rem;

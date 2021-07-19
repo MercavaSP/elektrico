@@ -8,8 +8,6 @@ const formsRules = () => {
             target.value = '';
             return;
         }
-
-        
     });
 
     body.addEventListener('focusout', (e) => {
