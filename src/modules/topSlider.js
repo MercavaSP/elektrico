@@ -46,7 +46,6 @@ const topSlider = () => {
             let target = event.target;
 
             if (!target.matches('.dot')) {
-                console.log(target);
                 return;
             }
             prevSlide(slide, currentSlide, 'top-slider_item__active');

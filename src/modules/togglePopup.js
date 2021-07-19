@@ -4,7 +4,7 @@ const togglePopup = () => {
         overlay = document.querySelector('.modal-overlay'),
         popupBtn = document.querySelectorAll('.callback-btn'),
         popupClose = document.querySelector('.modal-close'),
-        order = document.querySelectorAll('.img-wrapper_s');
+        order = document.querySelectorAll('.slide-card');
     
     
     
@@ -19,8 +19,8 @@ const togglePopup = () => {
     console.log(order);
     order.forEach((e) => {
         e.addEventListener('click', () => {
-            popup.style.display = 'none';
-            overlay.style.display = 'none';
+            popup.style.display = 'block';
+            overlay.style.display = 'block';
         });
     });
 
