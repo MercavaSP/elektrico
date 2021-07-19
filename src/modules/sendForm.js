@@ -43,6 +43,16 @@ const sendForm = () => {
             }
         };
 
+        const validateName = (fio) => {
+            let fo = fio[0].value.length;
+            if (fo < 2) {
+                errorInput(fio[0], 'минимум 2 буквы');
+                return false ;
+            } else {
+                return true;
+            }
+        };
+
         forms.forEach(form => {
             form.addEventListener('input', (evt) => {
                 let target = evt.target;
@@ -57,8 +67,9 @@ const sendForm = () => {
 
                 }
                 if (target.name === 'fio') {
+                    let fo = target.value.length;
                     target.value = target.value.replace(/[^а-я \-\_\.\,\!\?\~\*\']{2,}/gi, '');
-
+                                        
                 }
                 
                 
@@ -79,10 +90,13 @@ const sendForm = () => {
             form.addEventListener('submit', (event) => {
                 event.preventDefault();
                 const firmTel = [...event.target.elements].filter((item) => item.name === 'tel');
+                const firmName = [...event.target.elements].filter((item) => item.name === 'fio')
                 if (!validateTel(firmTel)) {
                     return;
+                } 
+                if (!validateName(firmName)) {
+                    return;
                 }
-                
 
                 form.appendChild(statusMessage);
                 statusMessage.style.cssText = `font-size: 2rem;
